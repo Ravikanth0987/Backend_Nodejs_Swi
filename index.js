@@ -7,10 +7,11 @@ const bodyParser = require('body-parser');
 const firmRoutes=require('./routes/firmRoutes')
 const productRoutes = require('./routes/productRoutes');
 app.use('/uploads', express.static('uploads'));
-const cors = require('cors');
+const cors = require('cors');//Cross-Origin Resource Sharing It is a security feature built into browsers.
+// cors- default, a browser blocks API requests if your frontend and backend are on different domains or ports.
 const path = require('path')
 
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 
 // Load .env variables
 dotenv.config();
@@ -31,7 +32,7 @@ app.use('/product', productRoutes);
 app.use('/uploads', express.static('uploads'));
 // Default route
 app.get('/', (req, res) => {
-    res.send("<h1>Welcome to SUBY</h1>");
+    res.send("<h1>Welcome to Swiggy</h1>");
 });
 
 // Start server
