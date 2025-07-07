@@ -11,7 +11,7 @@ const cors = require('cors');//Cross-Origin Resource Sharing It is a security fe
 // cors- default, a browser blocks API requests if your frontend and backend are on different domains or ports.
 const path = require('path')
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 // Load .env variables
 dotenv.config();
